@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap');
+
+html{
+    font-size: 14px;
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    object-position: top;
+    max-height: 90vh;
+    overflow: hidden;
+    image-resolution: 300dpi;
+}
+
+.card-text {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.old_price{
+    font-size: 13px;
+    color: rgb(142,142,142);
+}
+.selling_price{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pic-box{
+    position: relative;
+}
+
+.hot{
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+    max-width: 50px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: inline;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 65px;
+    /* z-index: 10; */
+}
+
+.pic-box img{
+    width: 100%;
+    max-width: 255px;
+    height: auto;
+}
+ /* .register{
+    display: flex;
+    
+ } */
+
+#dropdownMenuButton1{
+    padding: 0;
+}
+
+.dropdown{
+    display: inline-block;
+    line-height: 50px;
+}
+
+.navbar-collapse{
+    line-height: 40px;
+}

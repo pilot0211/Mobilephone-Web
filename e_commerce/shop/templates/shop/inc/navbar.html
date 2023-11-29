@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-success p-2 text-white bg-opacity-75 sticky-top">
+    <div class="container ">
+      <a class="navbar-brand" href="{% url 'home' %}">E-commerce</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto ">
+          <a class="nav-link text-light" aria-current="page" href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
+          <a class="nav-link text-light" href="{% url 'collections' %}"><i class="fa fa-cubes"></i> Collections</a>
+          {% if request.user.is_authenticated %}
+          <div class="dropdown">
+            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link text-light dropdown-toggle user" href="#"><i class="fa fa-user"></i> {{request.user}}</a>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="nav-link text-dark" href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+              <li><a class="nav-link text-dark" href="{% url 'favviewpage' %}"><i class="fa fa-heart"></i> Favourite</a></li>
+              <hr style="border-color: #b8bfc2">
+              <li><a class="nav-link text-dark" href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log out</a></li>
+            </ul>
+          </div>
+          {% else %}
+          <a class="nav-link text-light" href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Login</a>
+          <a class="nav-link text-light" href="{% url 'register' %}"><i class="fa fa-user"></i> Register</a> 
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </nav>
